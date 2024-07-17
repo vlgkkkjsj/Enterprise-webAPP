@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="pt-BR" data-bs-theme="auto">
+<head>
+    <script src="color-modes.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Document</title>
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/starter-template/">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    <style>
+        body {
+            min-height: 100vh;
+            min-height: -webkit-fill-available;
+        }
+
+        html {
+            height: -webkit-fill-available;
+        }
+
+        main {
+            height: 100vh;
+            height: -webkit-fill-available;
+            max-height: 100vh;
+            overflow-x: auto;
+            overflow-y: hidden;
+        }
+
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 300px;
+            background-color: #2e3f47;
+            padding: 20px;
+            border-right: 1px solid #e3e7eb;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            color: #f4f1f1;
+        }
+
+        .nav-pills .nav-link.active {
+            background-color: #79969C;
+        }
+
+        .nav {
+            --bs-nav-link-color: #f4f1f1;
+            --bs-nav-link-hover-color: #79969C;
+            color: #f4f1f1;
+        }
+
+        .sidebar .btn-toggle {
+            width: 100%;
+            text-align: left;
+        }
+
+        .dropdown {
+            padding-top: 54vh;
+            color: #f4f1f1;
+        }
+
+        .card {
+            margin-left: 320px;
+            margin-right: 20px;
+            margin-bottom: 20px;
+        }
+
+        .card .card-body {
+            border-color: #ced4da;
+        }
+
+        .pagination {
+            margin-right: 25vh;
+            margin-top: 40px;
+            padding-top: 20px;
+        }
+
+        .d-flex {
+            display: flex;
+        }
+
+        .table {
+            font-size: 16px;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .nav-link:hover {
+            border-left: #f4f1f1 2px solid;
+            color: #f4f1f1;
+        }
+
+        .btn:hover {
+            animation: pulse 0.5s infinite;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(-100%);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        .sidebar {
+            animation: slideIn 0.5s ease-out;
+        }
+
+        input[type="search"]:focus {
+            transition: width 0.3s ease-in-out;
+            width: 250px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        a {
+            color: #f4f1f1;
+        }
+
+        @keyframes shadowPulse {
+            0% {
+                box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+            }
+            50% {
+                box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            }
+            100% {
+                box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+            }
+        }
+
+        .card:hover {
+            animation: shadowPulse 1s infinite;
+        }
+
+        .custom-form {
+            margin-left: 70vh;
+            background-color: #ffffff;
+            border: 1px solid #ffffff;
+            max-width: 960px;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="fade-in">
+        <div class="sidebar slide-in">
+            <div class="d-flex flex-column flex-shrink-0 p-3">
+                <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-decoration-none">
+                    <svg class="bi pe-none me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+                    <span class="fs-4">Sidebar</span>
+                </a>
+                <hr>
+                <ul class="nav nav-pills flex-column mb-auto">
+                    <li class="nav-item BODY">
+                        <a href="#" class="nav-link" aria-current="page">
+                            <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#home"></use></svg>
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link active">
+                            <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#speedometer2"></use></svg>
+                            Dashboard
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link">
+                            <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#table"></use></svg>
+                            Orders
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link">
+                            <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#grid"></use></svg>
+                            Products
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link">
+                            <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#people-circle"></use></svg>
+                            Customers
+                        </a>
+                    </li>
+                </ul>
+                <div class="dropdown">
+                    <hr>
+                    <a href="#" class="d-flex align-items-center text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="" alt="" width="32" height="32" class="rounded-circle me-2">
+                        <strong>{{user.username}}</strong>
+                    </a>
+                    <ul class="dropdown-menu text-small shadow">
+                        <li><a class="dropdown-item" href="#">New project...</a></li>
+                        <li><a class="dropdown-item" href="#">Settings</a></li>
+                        <li><a class="dropdown-item" href="#">Profile</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Sign out</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container smooth-transition">
+            <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+                <div class="col-md-3 mb-2 mb-md-0">
+                    <a href="/" class="d-inline-flex text-decoration-none">
+                        <svg class="bi" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
+                    </a>
+                </div>
+                <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+                    <li><a href="#" class="nav-link px-2 link-secondary">Internal Users</a></li>
+                </ul>
+                <div class="col-md-3 text-end">
+                    {% if user.is_authenticated %}
+                    <a type="button" class="btn btn-primary btn-jump" href="{% url 'logout' %}">Sair</a>
+                    {% endif %}
+                </div>
+            </header>
+        </div>
+
+        <div class="py-3 text-center fade-in">
+            <h2 class="slide-in">Cadastro</h2>
+        </div>
+
+        <div class="custom-form fade-in">
+            <div class="col-md-3 col-lg-8">
+                <form class="needs-validation" novalidate action="{% url 'salvar' %}" method="POST">
+                    {% csrf_token %}
+                    <div class="row g-3">
+                        <div class="col-sm-6">
+                            <label for="firstName" class="form-label">Nickname</label>
+                            <input type="text" class="form-control" name="nickname" id="firstName" placeholder="nickname" value="" required>
+                            <div class="invalid-feedback">
+                                Valid first name is required.
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <label for="" class="form-label">name</label>
+                            <div class="input-group has-validation">
+                                <input type="text" class="form-control" name="name" id="nickname" placeholder="name" required>
+                                <div class="invalid-feedback">
+                                    Your name is required.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <label for="" class="form-label">Gender</label>
+                            <input type="text" class="form-control" name="gender" id="address" placeholder="Gender" required>
+                            <div class="invalid-feedback">
+                                Please enter your Gender.
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <label for="" class="form-label">Age</label>
+                            <input type="text" class="form-control" name="age" id="address" placeholder="AGE" required>
+                            <div class="invalid-feedback">
+                                Please enter your age.
+                            </div>
+                        </div>
+
+                        <button class="btn btn-outline-success btn-lg px-1 rounded-pill btn-jump" type="submit">Continue to checkout</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="py-3 my-4">
+        <div class="container">
+            <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Features</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Pricing</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>
+            </ul>
+            <p class="text-center text-body-secondary">© 2024 Company, Inc</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+        // Script para validação de formulário
+        const forms = document.querySelectorAll('.needs-validation');
+        Array.from(forms).forEach(form => {
+            form.addEventListener('submit', event => {
+                if (!form.checkValidity()) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                } else {
+                    // Limpa o formulário após envio bem-sucedido
+                    setTimeout(() => {
+                        form.reset();
+                        form.classList.remove('was-validated');
+                    }, 1000); // Delay to allow form submission
+                }
+                form.classList.add('was-validated');
+            }, false);
+        });
+    </script>
+</body>
+</html>

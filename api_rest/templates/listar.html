@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="pt-BR" data-bs-theme="auto">
+<head>
+    <script src="color-modes.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Document</title>
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/starter-template/">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    <style>
+        body {
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
+}
+
+html {
+    height: -webkit-fill-available;
+}
+
+main {
+    height: 100vh;
+    height: -webkit-fill-available;
+    max-height: 100vh;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+/* Estilos específicos para a barra lateral */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 300px;
+    background-color: #2e3f47;
+    padding: 20px;
+    border-right: 1px solid #e3e7eb;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    color: #f4f1f1;
+}
+
+
+.nav-pills .nav-link.active {
+    background-color:#79969C;
+}
+ .nav{
+    --bs-nav-link-color: #f4f1f1;
+    --bs-nav-link-hover-color:#79969C;
+    color: #f4f1f1;
+}
+.sidebar .btn-toggle {
+    width: 100%;
+    text-align: left;
+}
+
+.dropdown {
+    padding-top: 54vh;
+    color: #f4f1f1;
+}
+
+.card {
+    margin-left: 320px; 
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.card .card-body {
+    border-color: #ced4da;
+}
+
+.pagination {
+    margin-right: 25vh;
+    margin-top: 40px;
+    padding-top: 20px;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.table {
+    font-size: 16px;
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.nav-link:hover{
+    border-left: #f4f1f1 2px solid;
+    color: #f4f1f1;
+}
+
+.btn:hover {
+    animation: pulse 0.5s infinite;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.sidebar {
+    animation: slideIn 0.5s ease-out;
+}
+
+/* Outros estilos */
+input[type="search"]:focus {
+    transition: width 0.3s ease-in-out;
+    width: 250px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+a
+{
+    color: #f4f1f1;
+}
+
+@keyframes shadowPulse {
+    0% {
+        box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    }
+    100% {
+        box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    }
+}
+
+.card:hover {
+    animation: shadowPulse 1s infinite;
+}
+    </style>
+</head>
+
+<body>
+
+    <main class="fade-in">
+
+    <div class="sidebar">
+      <div class="d-flex flex-column flex-shrink-0 p-3 ">
+        <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto  text-decoration-none" >
+          <svg class="bi pe-none me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+          <span class="fs-4">Sidebar</span>
+        </a>
+        <hr>
+        <ul class="nav nav-pills flex-column mb-auto">
+          <li class="nav-item">
+            <a href="#" class="nav-link " aria-current="page">
+              <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#home"></use></svg>
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="#" class="nav-link active">
+              Dashboard
+            </a>
+          </li>
+          <li>
+            <a href="#" class="nav-link ">
+              <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#table"></use></svg>
+              Cadastrar Usuário
+            </a>
+          </li>
+          <li>
+            <a href="#" class="nav-link ">
+              <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#grid"></use></svg>
+              Products
+            </a>
+          </li>
+          <li>
+            <a href="#" class="nav-link ">
+              <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#people-circle"></use></svg>
+              Customers
+            </a>
+          </li>
+        </ul>
+        
+        <div class="dropdown">
+          <hr>
+          <a href="#" class="d-flex align-items-center  text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="" alt="" width="32" height="32" class="rounded-circle me-2">
+            <strong>{{user.username}}</strong>
+          </a>
+          <ul class="dropdown-menu text-small shadow">
+            <li><a class="dropdown-item" href="#">New project...</a></li>
+            <li><a class="dropdown-item" href="#">Settings</a></li>
+            <li><a class="dropdown-item" href="#">Profile</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Sign out</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+      </div>
+      <div class="container">
+        <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+          <div class="col-md-3 mb-2 mb-md-0">
+            <a href="/" class="d-inline-flex  text-decoration-none">
+              <svg class="bi" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
+            </a>
+          </div>
+          <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+            <li><a href="#" class="nav-link px-2 link-secondary">Internal Users</a></li>
+
+          </ul>
+          <div class="col-md-3 text-end">
+            {% if user.is_authenticated %}
+            <a type="button" class="btn btn-primary btn-jump" href="{% url 'logout' %}">Sair</a>
+          </div>
+          {% endif %}
+        </header>
+        </div>
+
+            <div class="container my-4">
+
+                      <div class="d-flex justify-content-end align-items-end mb-3">
+                        <a type="button" class="btn btn-outline-info btn-jump" type="button" href="{% url 'cadastrar' %}">cadastrar</a>
+                        <form class="d-flex" role="search" action="{% url 'listar' %}" method="get">
+                          <input class="form-control me-2" type="search" name="q" placeholder="Search" aria-label="Search" value="{% if query %}{{ query }}{% endif %}">
+                          {% if query %}
+                              <a href="{% url 'listar' %}" class="btn btn-outline-secondary">
+                                  <i class="bi bi-x-circle"></i>
+                              </a>
+                          {% endif %}
+                          <button class="btn btn-outline-success button-click-animation" type="submit">Search</button>
+                      </form>                         
+                      </div>
+            </div>
+            
+            <div class="card fade-in">
+              <div class="card-body ">
+              </div>
+                <div class="table-container">
+                  <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Nickname</th>
+                            <th scope="col">Nome</th>
+                            <th scope="col">Idade</th>
+                            <th scope="col">Gênero</th>
+                            <th scope="col">Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for user in page_obj %}
+                        <tr>
+                            <th scope="row">{{ user.id }}</th>
+                            <td>{{ user.nickname }}</td>
+                            <td>{{ user.name }}</td>
+                            <td>{{ user.age }}</td>
+                            <td>{{ user.gender }}</td>
+                            <td>
+                                <button type="button" class="btn btn-info btn-jump me-2" data-bs-toggle="modal" data-bs-target="#modalUser{{ user.id }}">Ver</button>
+                                <a class="btn btn-warning btn-jump" data-bs-toggle="modal" data-bs-target="#updateModal{{ user.id }}">Editar</a>
+                                <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteModal" data-url="{% url 'delete' user.id %}">
+                                    Deletar
+                                </button>
+                            {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-center">
+            {% if page_obj.has_previous %}
+            <li class="page-item">
+                <a class="page-link" href="?page={{ page_obj.previous_page_number }}" aria-label="Anterior">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
+            {% endif %}
+            {% for num in page_obj.paginator.page_range %}
+            <li class="page-item {% if page_obj.number == num %}active{% endif %}">
+                <a class="page-link" href="?page={{ num }}">{{ num }}</a>
+            </li>
+            {% endfor %}
+            {% if page_obj.has_next %}
+            <li class="page-item">
+                <a class="page-link" href="?page={{ page_obj.next_page_number }}" aria-label="Próximo">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
+            {% endif %}
+        </ul>
+    </nav>
+</div>
+
+<!-- Modais -->
+{% for user in page_obj %}
+<div class="modal fade " id="modalUser{{ user.id }}" tabindex="-1" aria-labelledby="modalUserLabel{{ user.id }}" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered fade-in fade-out">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalUserLabel{{ user.id }}">Detalhes do Usuário</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+            </div>
+            <div class="modal-body">
+                <p><strong>ID:</strong> {{ user.id }}</p>
+                <p><strong>Nickname:</strong> {{ user.nickname }}</p>
+                <p><strong>Nome:</strong> {{ user.name }}</p>
+                <p><strong>Idade:</strong> {{ user.age }}</p>
+                <p><strong>Gênero:</strong> {{ user.gender }}</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %}
+<!-- Modal -->
+{% for user in page_obj %}
+<div class="modal fade" id="updateModal{{user.id}}" tabindex="-1" aria-labelledby="updateModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="updateModalLabel">Update Information</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form action="{% url 'update' user.id %}"  method="POST">
+            {% csrf_token %}
+            <div class="mb-3">
+                <label for="firstName" class="form-label">Nickname</label>
+                <input type="text" class="form-control" name="nickname" id="firstName" placeholder="nickname" value="{{user.nickname}}" required>
+            </div>
+            <div class="mb-3">
+                <label for="firstName" class="form-label">Name</label>
+                <input type="text" class="form-control" name="name" id="firstName" placeholder="name" value="{{user.name}}" required>
+            </div>
+            <div class="mb-3">
+                <label for="firstName" class="form-label">Gender</label>
+                <input type="text" class="form-control" name="gender" id="firstName" placeholder="gender" value="{{user.gender}}" required>
+            </div>
+            <div class="mb-3">
+                <label for="firstName" class="form-label">Age</label>
+                <input type="text" class="form-control" name="age" id="firstName" placeholder="age" value="{{user.age}}" required>
+            </div>  
+            <button type="submit" class="btn btn-primary">Update</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  {%endfor%}
+         <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="deleteModalLabel">Confirmação de Deleção</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        Tem certeza que deseja deletar este usuário?
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-danger" id="confirmDeleteBtn">Deletar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</main>
+
+<footer class="py-3 my-4">
+    <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Features</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Pricing</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>
+    </ul>
+    <p class="text-center text-body-secondary">© 2024 Company, Inc</p>
+  </footer>
+  <!-- ============================================================= SCRIPTS ========================================================= -->
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+      <script>
+        // Iniciar AOS
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init();
+        });
+
+        document.querySelector('form').addEventListener('submit', function() {
+            showSpinner();
+  
+            setTimeout(hideSpinner, 2000);
+        });
+
+        // Alternância de classe
+        document.querySelector('.toggle-button').addEventListener('click', function() {
+            document.querySelector('.toggle-element').classList.toggle('active');
+        });
+    </script>
+    
+    <script>
+        $(document).ready(function(){
+            var urlToDelete;
+
+            $('#deleteModal').on('show.bs.modal', function (event) {
+                var button = $(event.relatedTarget); 
+                urlToDelete = button.data('url');
+            });
+
+            $('#confirmDeleteBtn').click(function(){
+                window.location.href = urlToDelete;
+            });
+        });
+    </script>
+</body>
+
+</html>
+
